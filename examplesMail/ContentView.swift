@@ -54,7 +54,7 @@ struct MasterView: View {
                 NavigationLink(
                     destination: DetailView(event: event)
                 ) {
-                    Text("\(event.timestamp!, formatter: dateFormatter)")
+                    MailListCell()
                 }
             }.onDelete { indices in
                 self.events.delete(at: indices, from: self.viewContext)
