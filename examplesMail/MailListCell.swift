@@ -9,14 +9,18 @@
 import SwiftUI
 
 struct MailListCell: View {
+    
+    @ObservedObject var mail: Mail
+    
     var body: some View {
         VStack {
             HStack {
-                Text("Nataly Portman")
-                Text("21:43")
+                Text(mail.author!)
+                Text(mail.timestamp!.description)
             }
             
-            Text("Hello handsome")
+            Text(mail.subject!)
+            Text(mail.body!)
         }
     }
     

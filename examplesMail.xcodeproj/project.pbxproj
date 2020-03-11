@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62621A724192AF000673AEC /* IndexRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62621A624192AF000673AEC /* IndexRequestHandler.swift */; };
+		D62621AB24192AF000673AEC /* Spotlight.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D62621A424192AF000673AEC /* Spotlight.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D62621B724192D1900673AEC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62621B624192D1900673AEC /* ShareViewController.swift */; };
+		D62621BA24192D1900673AEC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62621B824192D1900673AEC /* MainInterface.storyboard */; };
+		D62621BE24192D1900673AEC /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D62621B424192D1900673AEC /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D6AF8F5624190F3700C8F627 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AF8F5524190F3700C8F627 /* LoginView.swift */; };
 		D6EADCA72418B484007F03B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCA62418B484007F03B9 /* AppDelegate.swift */; };
 		D6EADCAA2418B484007F03B9 /* examplesMail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCA82418B484007F03B9 /* examplesMail.xcdatamodeld */; };
@@ -19,7 +24,47 @@
 		D6EADCC02418B4A8007F03B9 /* MailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCBF2418B4A8007F03B9 /* MailListCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D62621A924192AF000673AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EADC9B2418B484007F03B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D62621A324192AF000673AEC;
+			remoteInfo = Spotlight;
+		};
+		D62621BC24192D1900673AEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EADC9B2418B484007F03B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D62621B324192D1900673AEC;
+			remoteInfo = Share;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D62621AC24192AF000673AEC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D62621BE24192D1900673AEC /* Share.appex in Embed App Extensions */,
+				D62621AB24192AF000673AEC /* Spotlight.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D62621A424192AF000673AEC /* Spotlight.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spotlight.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62621A624192AF000673AEC /* IndexRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRequestHandler.swift; sourceTree = "<group>"; };
+		D62621A824192AF000673AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D62621B424192D1900673AEC /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62621B624192D1900673AEC /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		D62621B924192D1900673AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D62621BB24192D1900673AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D62621C224192DF000673AEC /* examplesMail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = examplesMail.entitlements; sourceTree = "<group>"; };
 		D6AF8F5524190F3700C8F627 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D6EADCA32418B484007F03B9 /* examplesMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examplesMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EADCA62418B484007F03B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +80,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D62621A124192AF000673AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D62621B124192D1900673AEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6EADCA02418B484007F03B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +104,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D62621A524192AF000673AEC /* Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				D62621A624192AF000673AEC /* IndexRequestHandler.swift */,
+				D62621A824192AF000673AEC /* Info.plist */,
+			);
+			path = Spotlight;
+			sourceTree = "<group>";
+		};
+		D62621B524192D1900673AEC /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				D62621B624192D1900673AEC /* ShareViewController.swift */,
+				D62621B824192D1900673AEC /* MainInterface.storyboard */,
+				D62621BB24192D1900673AEC /* Info.plist */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		D6EADC9A2418B484007F03B9 = {
 			isa = PBXGroup;
 			children = (
 				D6EADCA52418B484007F03B9 /* examplesMail */,
+				D62621A524192AF000673AEC /* Spotlight */,
+				D62621B524192D1900673AEC /* Share */,
 				D6EADCA42418B484007F03B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				D6EADCA32418B484007F03B9 /* examplesMail.app */,
+				D62621A424192AF000673AEC /* Spotlight.appex */,
+				D62621B424192D1900673AEC /* Share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +146,7 @@
 		D6EADCA52418B484007F03B9 /* examplesMail */ = {
 			isa = PBXGroup;
 			children = (
+				D62621C224192DF000673AEC /* examplesMail.entitlements */,
 				D6EADCA62418B484007F03B9 /* AppDelegate.swift */,
 				D6EADCAB2418B484007F03B9 /* SceneDelegate.swift */,
 				D6EADCAD2418B484007F03B9 /* Event.swift */,
@@ -90,6 +173,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D62621A324192AF000673AEC /* Spotlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D62621AF24192AF000673AEC /* Build configuration list for PBXNativeTarget "Spotlight" */;
+			buildPhases = (
+				D62621A024192AF000673AEC /* Sources */,
+				D62621A124192AF000673AEC /* Frameworks */,
+				D62621A224192AF000673AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spotlight;
+			productName = Spotlight;
+			productReference = D62621A424192AF000673AEC /* Spotlight.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D62621B324192D1900673AEC /* Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D62621BF24192D1900673AEC /* Build configuration list for PBXNativeTarget "Share" */;
+			buildPhases = (
+				D62621B024192D1900673AEC /* Sources */,
+				D62621B124192D1900673AEC /* Frameworks */,
+				D62621B224192D1900673AEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Share;
+			productName = Share;
+			productReference = D62621B424192D1900673AEC /* Share.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D6EADCA22418B484007F03B9 /* examplesMail */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6EADCBC2418B486007F03B9 /* Build configuration list for PBXNativeTarget "examplesMail" */;
@@ -97,10 +214,13 @@
 				D6EADC9F2418B484007F03B9 /* Sources */,
 				D6EADCA02418B484007F03B9 /* Frameworks */,
 				D6EADCA12418B484007F03B9 /* Resources */,
+				D62621AC24192AF000673AEC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D62621AA24192AF000673AEC /* PBXTargetDependency */,
+				D62621BD24192D1900673AEC /* PBXTargetDependency */,
 			);
 			name = examplesMail;
 			productName = examplesMail;
@@ -117,6 +237,12 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "AGIMA Education";
 				TargetAttributes = {
+					D62621A324192AF000673AEC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D62621B324192D1900673AEC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					D6EADCA22418B484007F03B9 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -136,11 +262,28 @@
 			projectRoot = "";
 			targets = (
 				D6EADCA22418B484007F03B9 /* examplesMail */,
+				D62621A324192AF000673AEC /* Spotlight */,
+				D62621B324192D1900673AEC /* Share */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D62621A224192AF000673AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D62621B224192D1900673AEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62621BA24192D1900673AEC /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6EADCA12418B484007F03B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +297,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D62621A024192AF000673AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62621A724192AF000673AEC /* IndexRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D62621B024192D1900673AEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62621B724192D1900673AEC /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6EADC9F2418B484007F03B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,7 +329,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D62621AA24192AF000673AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D62621A324192AF000673AEC /* Spotlight */;
+			targetProxy = D62621A924192AF000673AEC /* PBXContainerItemProxy */;
+		};
+		D62621BD24192D1900673AEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D62621B324192D1900673AEC /* Share */;
+			targetProxy = D62621BC24192D1900673AEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		D62621B824192D1900673AEC /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D62621B924192D1900673AEC /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		D6EADCB62418B486007F03B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -182,6 +362,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D62621AD24192AF000673AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W9LV3GHQ6;
+				INFOPLIST_FILE = Spotlight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.agima.chipecdemo.Spotlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D62621AE24192AF000673AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Spotlight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.agima.chipecdemo.Spotlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D62621C024192D1900673AEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5W9LV3GHQ6;
+				INFOPLIST_FILE = Share/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.agima.chipecdemo.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D62621C124192D1900673AEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Share/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.agima.chipecdemo.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D6EADCBA2418B486007F03B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -299,17 +553,23 @@
 		D6EADCBD2418B486007F03B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = examplesMail/examplesMail.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"examplesMail/Preview Content\"";
+				DEVELOPMENT_TEAM = 5W9LV3GHQ6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = examplesMail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.ivedeneev.examplesMail;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.agima.chipecdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "chipec demo";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,17 +578,22 @@
 		D6EADCBE2418B486007F03B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = examplesMail/examplesMail.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"examplesMail/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = examplesMail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.ivedeneev.examplesMail;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.agima.chipecdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +602,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D62621AF24192AF000673AEC /* Build configuration list for PBXNativeTarget "Spotlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62621AD24192AF000673AEC /* Debug */,
+				D62621AE24192AF000673AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D62621BF24192D1900673AEC /* Build configuration list for PBXNativeTarget "Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62621C024192D1900673AEC /* Debug */,
+				D62621C124192D1900673AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D6EADC9E2418B484007F03B9 /* Build configuration list for PBXProject "examplesMail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

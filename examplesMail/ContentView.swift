@@ -29,8 +29,8 @@ struct ContentView: View {
                     leading: EditButton(),
                     trailing: Button(
                         action: {
-//                            withAnimation { Event.create(in: self.viewContext) }
-                            self.presentingModal = true
+                            withAnimation { Mail.create(in: self.viewContext, author: "Igor Vedeneev", body: UUID().uuidString) }
+//                            self.presentingModal = true
                         }
                     ) { 
                         Image(systemName: "plus")
@@ -45,33 +45,33 @@ struct ContentView: View {
 
 struct MasterView: View {
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Event.timestamp, ascending: true)], 
+        sortDescriptors: [NSSortDescriptor(keyPath: \Mail.timestamp, ascending: true)],
         animation: .default)
-    var events: FetchedResults<Event>
+    var mailList: FetchedResults<Mail>
 
     @Environment(\.managedObjectContext)
     var viewContext
 
     var body: some View {
         List {
-            ForEach(events, id: \.self) { event in
+            ForEach(mailList, id: \.self) { mail in
                 NavigationLink(
-                    destination: DetailView(event: event)
+                    destination: DetailView(mail: mail)
                 ) {
-                    MailListCell()
+                    MailListCell(mail: mail)
                 }
             }.onDelete { indices in
-                self.events.delete(at: indices, from: self.viewContext)
+                self.mailList.delete(at: indices, from: self.viewContext)
             }
         }
     }
 }
 
 struct DetailView: View {
-    @ObservedObject var event: Event
+    @ObservedObject var mail: Mail
 
     var body: some View {
-        Text("\(event.timestamp!, formatter: dateFormatter)")
+        Text("\(mail.timestamp!, formatter: dateFormatter)")
             .navigationBarTitle(Text("Detail"))
     }
 }
