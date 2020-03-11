@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6AF8F5624190F3700C8F627 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AF8F5524190F3700C8F627 /* LoginView.swift */; };
 		D6EADCA72418B484007F03B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCA62418B484007F03B9 /* AppDelegate.swift */; };
 		D6EADCAA2418B484007F03B9 /* examplesMail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCA82418B484007F03B9 /* examplesMail.xcdatamodeld */; };
 		D6EADCAC2418B484007F03B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCAB2418B484007F03B9 /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6AF8F5524190F3700C8F627 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D6EADCA32418B484007F03B9 /* examplesMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examplesMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EADCA62418B484007F03B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6EADCA92418B484007F03B9 /* examplesMail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = examplesMail.xcdatamodel; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				D6EADCA82418B484007F03B9 /* examplesMail.xcdatamodeld */,
 				D6EADCB32418B486007F03B9 /* Preview Content */,
 				D6EADCBF2418B4A8007F03B9 /* MailListCell.swift */,
+				D6AF8F5524190F3700C8F627 /* LoginView.swift */,
 			);
 			path = examplesMail;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EADCC02418B4A8007F03B9 /* MailListCell.swift in Sources */,
+				D6AF8F5624190F3700C8F627 /* LoginView.swift in Sources */,
 				D6EADCAE2418B484007F03B9 /* Event.swift in Sources */,
 				D6EADCB02418B484007F03B9 /* ContentView.swift in Sources */,
 				D6EADCA72418B484007F03B9 /* AppDelegate.swift in Sources */,

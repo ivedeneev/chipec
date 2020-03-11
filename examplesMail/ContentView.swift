@@ -17,17 +17,20 @@ private let dateFormatter: DateFormatter = {
 
 struct ContentView: View {
     @Environment(\.managedObjectContext)
-    var viewContext   
+    var viewContext
+    
+    @State var presentingModal = false
  
     var body: some View {
         NavigationView {
             MasterView()
-                .navigationBarTitle(Text("Master"))
+                .navigationBarTitle(Text("AGIMA Mail"))
                 .navigationBarItems(
                     leading: EditButton(),
                     trailing: Button(
                         action: {
-                            withAnimation { Event.create(in: self.viewContext) }
+//                            withAnimation { Event.create(in: self.viewContext) }
+                            self.presentingModal = true
                         }
                     ) { 
                         Image(systemName: "plus")
@@ -36,6 +39,7 @@ struct ContentView: View {
             Text("Detail view content goes here")
                 .navigationBarTitle(Text("Detail"))
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .sheet(isPresented: $presentingModal) { ModalView(presentedAsModal: self.$presentingModal) }
     }
 }
 
@@ -69,6 +73,13 @@ struct DetailView: View {
     var body: some View {
         Text("\(event.timestamp!, formatter: dateFormatter)")
             .navigationBarTitle(Text("Detail"))
+    }
+}
+
+struct ModalView: View {
+    @Binding var presentedAsModal: Bool
+    var body: some View {
+        Button("dismiss") { self.presentedAsModal = false }
     }
 }
 
