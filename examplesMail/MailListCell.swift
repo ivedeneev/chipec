@@ -10,7 +10,14 @@ import SwiftUI
 
 struct MailListCell: View {
     var body: some View {
-        Text("Nataly Portman")
+        VStack {
+            HStack {
+                Text("Nataly Portman")
+                Text("21:43")
+            }
+            
+            Text("Hello handsome")
+        }
     }
     
 }
