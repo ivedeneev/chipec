@@ -8,45 +8,18 @@
 
 import UIKit
 import CoreData
-import CoreSpotlight
-import MobileCoreServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    lazy var mailService = MailService(context: persistentContainer.viewContext)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        let items = ["Privet", "Privivka", "Predlozheniye"].map { str -> CSSearchableItem in
-            let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
-           attributeSet.title = str
-           attributeSet.contentDescription = "test"
-
-           return CSSearchableItem(uniqueIdentifier: str, domainIdentifier: "ru.agima.emampleMail", attributeSet: attributeSet)
-        }
-        CSSearchableIndex.default().indexSearchableItems(items) { (error) in
-            print(error)
-        }
+        mailService.startIndex()
         
         return true
-    }
-    
-    func indexItem(title: String, desc: String, identifier: String) {
-        let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
-        attributeSet.title = title
-        attributeSet.contentDescription = desc
-
-        let item = CSSearchableItem(uniqueIdentifier: "\(identifier)", domainIdentifier: "ru.agima.emampleMail", attributeSet: attributeSet)
-        CSSearchableIndex.default().indexSearchableItems([item]) { error in
-            if let error = error {
-                print("Indexing error: \(error.localizedDescription)")
-            } else {
-                print("Search item successfully indexed!")
-            }
-        }
     }
 
     // MARK: UISceneSession Lifecycle

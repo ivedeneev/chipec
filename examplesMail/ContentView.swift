@@ -8,12 +8,17 @@
 
 import SwiftUI
 
-private let dateFormatter: DateFormatter = {
+let dateFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateStyle = .medium
-    dateFormatter.timeStyle = .medium
+    dateFormatter.dateFormat = "HH:mm"
     return dateFormatter
 }()
+
+let bodies = ["Пацы, когда во двор пойдем играть?", "Ребят, в следующий раз лучше не записывайтесь, если примерно понимаете, что не пойдёте", "Если вы уже похоронили Фотошоп в эпоху Инстаграма и быстрых фоторедакторов — не спешите. Уметь фотошопить — один из 2-3 навыков, которые легко освоить и тут же начать зарабатывать.\n\nНа биржах — куча заказов даже для тех, кто занимается несколько недель. Людям нужны логотипы, баннеры, шаблоны — без работы не останется никто, даже если ещё вчера вы не знали, как работает пипетка."]
+
+let authors = ["Igor Vedeneev", "Макcим Калиниченко", "Юдаев Виктор", "Василий Удалов"]
+
+let subjects = ["Футбольчик", "Обучение photoshop"]
 
 struct ContentView: View {
     @Environment(\.managedObjectContext)
@@ -29,7 +34,7 @@ struct ContentView: View {
                     leading: EditButton(),
                     trailing: Button(
                         action: {
-                            withAnimation { Mail.create(in: self.viewContext, author: "Igor Vedeneev", body: UUID().uuidString) }
+                            withAnimation { Mail.create(in: self.viewContext, author: authors.randomElement()!, body: bodies.randomElement()!, subject: subjects.randomElement()!) }
 //                            self.presentingModal = true
                         }
                     ) { 

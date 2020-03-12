@@ -12,11 +12,12 @@
 		D62621B724192D1900673AEC /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62621B624192D1900673AEC /* ShareViewController.swift */; };
 		D62621BA24192D1900673AEC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62621B824192D1900673AEC /* MainInterface.storyboard */; };
 		D62621BE24192D1900673AEC /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D62621B424192D1900673AEC /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D663CC42241A263300403142 /* MailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663CC41241A263300403142 /* MailService.swift */; };
 		D6AF8F5624190F3700C8F627 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AF8F5524190F3700C8F627 /* LoginView.swift */; };
 		D6EADCA72418B484007F03B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCA62418B484007F03B9 /* AppDelegate.swift */; };
 		D6EADCAA2418B484007F03B9 /* examplesMail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCA82418B484007F03B9 /* examplesMail.xcdatamodeld */; };
 		D6EADCAC2418B484007F03B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCAB2418B484007F03B9 /* SceneDelegate.swift */; };
-		D6EADCAE2418B484007F03B9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCAD2418B484007F03B9 /* Event.swift */; };
+		D6EADCAE2418B484007F03B9 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCAD2418B484007F03B9 /* Mail.swift */; };
 		D6EADCB02418B484007F03B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6EADCAF2418B484007F03B9 /* ContentView.swift */; };
 		D6EADCB22418B486007F03B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EADCB12418B486007F03B9 /* Assets.xcassets */; };
 		D6EADCB52418B486007F03B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EADCB42418B486007F03B9 /* Preview Assets.xcassets */; };
@@ -65,12 +66,13 @@
 		D62621B924192D1900673AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D62621BB24192D1900673AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D62621C224192DF000673AEC /* examplesMail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = examplesMail.entitlements; sourceTree = "<group>"; };
+		D663CC41241A263300403142 /* MailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailService.swift; sourceTree = "<group>"; };
 		D6AF8F5524190F3700C8F627 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D6EADCA32418B484007F03B9 /* examplesMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = examplesMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EADCA62418B484007F03B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6EADCA92418B484007F03B9 /* examplesMail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = examplesMail.xcdatamodel; sourceTree = "<group>"; };
 		D6EADCAB2418B484007F03B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6EADCAD2418B484007F03B9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		D6EADCAD2418B484007F03B9 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		D6EADCAF2418B484007F03B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6EADCB12418B486007F03B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6EADCB42418B486007F03B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -149,7 +151,7 @@
 				D62621C224192DF000673AEC /* examplesMail.entitlements */,
 				D6EADCA62418B484007F03B9 /* AppDelegate.swift */,
 				D6EADCAB2418B484007F03B9 /* SceneDelegate.swift */,
-				D6EADCAD2418B484007F03B9 /* Event.swift */,
+				D6EADCAD2418B484007F03B9 /* Mail.swift */,
 				D6EADCAF2418B484007F03B9 /* ContentView.swift */,
 				D6EADCB12418B486007F03B9 /* Assets.xcassets */,
 				D6EADCB62418B486007F03B9 /* LaunchScreen.storyboard */,
@@ -158,6 +160,7 @@
 				D6EADCB32418B486007F03B9 /* Preview Content */,
 				D6EADCBF2418B4A8007F03B9 /* MailListCell.swift */,
 				D6AF8F5524190F3700C8F627 /* LoginView.swift */,
+				D663CC41241A263300403142 /* MailService.swift */,
 			);
 			path = examplesMail;
 			sourceTree = "<group>";
@@ -317,9 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D663CC42241A263300403142 /* MailService.swift in Sources */,
 				D6EADCC02418B4A8007F03B9 /* MailListCell.swift in Sources */,
 				D6AF8F5624190F3700C8F627 /* LoginView.swift in Sources */,
-				D6EADCAE2418B484007F03B9 /* Event.swift in Sources */,
+				D6EADCAE2418B484007F03B9 /* Mail.swift in Sources */,
 				D6EADCB02418B484007F03B9 /* ContentView.swift in Sources */,
 				D6EADCA72418B484007F03B9 /* AppDelegate.swift in Sources */,
 				D6EADCAA2418B484007F03B9 /* examplesMail.xcdatamodeld in Sources */,
