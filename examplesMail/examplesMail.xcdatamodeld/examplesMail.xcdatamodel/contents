@@ -7,11 +7,12 @@
     <entity name="Mail" representedClassName="Mail" syncable="YES" codeGenerationType="class">
         <attribute name="author" attributeType="String"/>
         <attribute name="body" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
         <attribute name="subject" attributeType="String"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Mail" positionX="261" positionY="198" width="128" height="103"/>
+        <element name="Mail" positionX="261" positionY="198" width="128" height="118"/>
     </elements>
 </model>

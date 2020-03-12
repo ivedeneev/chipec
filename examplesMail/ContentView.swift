@@ -24,17 +24,19 @@ struct ContentView: View {
     @Environment(\.managedObjectContext)
     var viewContext
     
+    var service: MailService
+    
     @State var presentingModal = false
  
     var body: some View {
         NavigationView {
-            MasterView()
+            MasterView(service: service)
                 .navigationBarTitle(Text("AGIMA Mail"))
                 .navigationBarItems(
                     leading: EditButton(),
                     trailing: Button(
                         action: {
-                            withAnimation { Mail.create(in: self.viewContext, author: authors.randomElement()!, body: bodies.randomElement()!, subject: subjects.randomElement()!) }
+                            withAnimation { self.service.add(author: authors.randomElement()!, body: bodies.randomElement()!, subject: subjects.randomElement()!) }
 //                            self.presentingModal = true
                         }
                     ) { 
@@ -56,7 +58,10 @@ struct MasterView: View {
 
     @Environment(\.managedObjectContext)
     var viewContext
-
+    
+    
+    var service: MailService
+    
     var body: some View {
         List {
             ForEach(mailList, id: \.self) { mail in
@@ -66,7 +71,7 @@ struct MasterView: View {
                     MailListCell(mail: mail)
                 }
             }.onDelete { indices in
-                self.mailList.delete(at: indices, from: self.viewContext)
+//                self.mailList.delete(at: indices, from: self.viewContext)
             }
         }
     }
@@ -92,6 +97,6 @@ struct ModalView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        return ContentView().environment(\.managedObjectContext, context)
+        return ContentView(service: MailService.init(context: context)).environment(\.managedObjectContext, context)
     }
 }
